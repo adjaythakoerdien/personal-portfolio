@@ -9,7 +9,7 @@
 
 
 
-        
+
 
         <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container text-center">
@@ -167,99 +167,7 @@ $(document).ready(function() {
     </section><!--//single-post-wrapper-->
 
 
-    <section class="section pt-5 related-projects-section bg-white">
-		<div class="container">
-			<h3 class="section-title font-weight-bold text-center mb-4">You May Also Like...</h3>
-			<div class="blog-cards blog-cards-related">
-				<div class="row">
-					<div class="col-12 col-lg-4 mb-5">
-				        <div class="card rounded-0 border-0 shadow-sm eq-height">
-							<div class="card-img-container position-relative">
-						        <img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/blog/blog-post-thumb-2.jpg" %}" alt="">
-						        <div class="card-img-overlay overlay-mask text-center p-0">
-							        <div class="overlay-mask-content text-center w-100 position-absolute">
-									    <a class="btn btn-primary" href="blog-post.html">Read more</a>
-							        </div>
-							        <a class="overlay-mask-link position-absolute w-100 h-100" href="blog-post.html"></a>
-								</div>
-							</div>
-							<div class="card-body pb-4">
 
-								<h4 class="card-title mb-2"><a href="blog-post.html">React, Bootstrap, and Angular- The Basics</a></h4>
-								<div class="card-text">
-
-									<div class="excerpt"> Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...</div>
-								</div>
-
-							</div>
-							<div class="card-footer border-0">
-								<ul class="meta list-inline mb-0">
-									<li class="list-inline-item mr-3"><i class="far fa-clock mr-2"></i>June 18, 2018</li>
-									<li class="list-inline-item"><i class="fas fa-comment mr-2"></i><a href="#">8 Comments</a></li>
-								</ul>
-							</div>
-					    </div><!--//card-->
-			        </div>
-			        <div class="col-12 col-lg-4 mb-5">
-				        <div class="card rounded-0 border-0 shadow-sm eq-height">
-							<div class="card-img-container position-relative">
-						        <img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/blog/blog-post-thumb-4.jpg" %}" alt="">
-						        <div class="card-img-overlay overlay-mask  text-center p-0">
-							        <div class="overlay-mask-content text-center w-100 position-absolute">
-									    <a class="btn btn-primary" href="blog-post.html">Read more</a>
-							        </div>
-							        <a class="overlay-mask-link position-absolute w-100 h-100" href="blog-post.html"></a>
-								</div>
-							</div>
-							<div class="card-body pb-4">
-
-								<h4 class="card-title mb-2"><a href="blog-post.html">Learn React Components</a></h4>
-								<div class="card-text">
-									<div class="excerpt"> Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...</div>
-								</div>
-							</div>
-							<div class="card-footer border-0">
-								<ul class="meta list-inline mb-0">
-									<li class="list-inline-item mr-3"><i class="far fa-clock mr-2"></i>Apr 25, 2018</li>
-									<li class="list-inline-item"><i class="fas fa-comment mr-2"></i><a href="#">18 Comments</a></li>
-								</ul>
-							</div>
-					    </div><!--//card-->
-			        </div>
-
-			        <div class="col-12 col-lg-4 mb-5">
-				        <div class="card rounded-0 border-0 shadow-sm eq-height">
-							<div class="card-img-container position-relative">
-						        <img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/blog/blog-post-thumb-5.jpg" %}" alt="">
-						        <div class="card-img-overlay overlay-mask  text-center p-0">
-							        <div class="overlay-mask-content text-center w-100 position-absolute">
-									    <a class="btn btn-primary" href="blog-post.html">Read more</a>
-							        </div>
-							        <a class="overlay-mask-link position-absolute w-100 h-100" href="blog-post.html"></a>
-								</div>
-							</div>
-							<div class="card-body pb-4">
-
-								<h4 class="card-title mb-2"><a href="blog-post.html">
-	A Guide to Becoming a Full-Stack Developer</a></h4>
-								<div class="card-text">
-
-									<div class="excerpt"> Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod...</div>
-								</div>
-							</div>
-							<div class="card-footer border-0">
-								<ul class="meta list-inline mb-0">
-									<li class="list-inline-item mr-2"><i class="far fa-clock mr-2"></i>Mar 15, 2018</li>
-									<li class="list-inline-item"><i class="fas fa-comment mr-2"></i><a href="#">63 Comments</a></li>
-								</ul>
-							</div>
-					    </div><!--//card-->
-			        </div>
-				</div><!--//row-->
-			</div>
-
-		</div><!--//container-->
-	</section>
 
 
 	<section class="section py-5 bg-primary text-white">
@@ -269,10 +177,10 @@ $(document).ready(function() {
 		    </div>
 		    <h3 class="section-title font-weight-bold text-center mb-2">Interested in hiring me for your project?</h3>
 		    <div class="section-intro mx-auto text-center mb-3">
-			    Looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at <a class="link-on-bg" href="#">steve.doe@youremail.com</a> or use the <a class="link-on-bg" href="contact.html">form on the contact page</a>.
+			    Looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at <a class="link-on-bg" href="mailto:a.thakoerdien@gmail.com">a.thakoerdien@gmail.com</a> or use the <a class="link-on-bg" href="{% url 'contact' %}">form on the contact page</a>.
 		    </div>
 		    <div class="text-center">
-		        <a class="theme-btn-on-bg btn" href="contact.html">Let's Talk</a>
+		        <a class="theme-btn-on-bg btn" href="{% url 'contact' %}">Let's Talk</a>
 		    </div>
 		</div><!--//container-->
 	</section>
@@ -286,7 +194,7 @@ $(document).ready(function() {
     <!--//add jquery social share bar (configure your channels in js)-->
     <div id="share-bar"></div>
 
-{% endblock %}
+
 
 
     <!-- Javascript -->
@@ -305,7 +213,7 @@ $(document).ready(function() {
     <script type="text/javascript" src="{% static "portfolio/assets/js/social-share-bar.js" %}"></script>
 
 
-
+{% endblock %}
 
 </body>
 </html>
