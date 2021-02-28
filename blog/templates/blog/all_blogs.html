@@ -4,20 +4,140 @@
 
 {% block content %}
 
-<h1 id="blogtitle" class="font-weight-bold text-center">Blog</h1>
 
-<h3 class="text-center mb-5">Adjay heeft {{ blogs.count }} blog{{ blogs.count|pluralize }} geschreven</h3>
 
-{% for blog in blogs %}
-<div class="row justify-content-center my-3">
-  <div class="col-md-10">
-    <a href="{% url 'blog:detail' blog.id %}">
-      <h2>{{ blog.title }}</h2>
-    </a>
-    <h5 class="text-muted">{{ blog.date|date:'M d Y'|upper }}</h5>
-    <h4>{{ blog.description|striptags|truncatechars:100 }}</h4>
-  </div>
-</div>
-{% endfor %}
+        <div class="header-intro theme-bg-primary text-white py-5">
+	        <div class="container position-relative">
+		        <div class="media flex-column flex-md-row">
+              <img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
+			        <div class="media-body align-self-center">
+			            <h2 class="page-heading mb-2">Adjay Thakoerdien's Blog</h2>
+			            <div class="page-heading-tagline mb-3">I write about web development and my life as a developer. <br class="d-lg-block d-none">You can follow me via the various channels below:</div>
+			            <ul class="social-list-square list-inline mb-0">
+			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://www.linkedin.com/in/adjaythakoerdien/" target="_blank"><i class="fab fa-linkedin-in fa-fw text-white"></i></a></li>
+			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://github.com/adjaythakoerdien" target="_blank"><i class="fab fa-github-alt fa-fw text-white"></i></a></li>
+			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://www.instagram.com/adjaythakoerdien/" target="_blank"><i class="fab fa-instagram fa-fw text-white"></i></a></li>
+			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://www.facebook.com/adjaythakoerdien" target="_blank"><i class="fab fa-facebook fa-fw text-white"></i></a></li>
+
+
+			            </ul><!--//social-list-->
+			        </div>
+		        </div>
+
+
+	        </div><!--//container-->
+        </div><!--//header-intro-->
+
+    </header><!--//header-->
+
+    <section class="section pt-5">
+        <div class="container blog-cards">
+
+	        <div class="row">
+		        <div class="col-12">
+			        <div class="featured-card d-md-table card rounded-0 border-0 shadow-sm mb-5">
+						<div class="featured-card-image card-img-container position-relative d-md-table-cell">
+						    <span class="badge badge-success mb-2 position-absolute">Featured</span>
+						    <div class="card-img-overlay overlay-mask text-center p-0">
+						        <a class="overlay-mask-link position-absolute w-100 h-100" href="{% url 'blog:detail' laatsteblog.id %}"></a>
+							</div>
+						</div>
+						<div class="featured-card-body card-body d-md-table-cell  pb-4">
+
+							<h4 class="card-title mb-2"><a href="{% url 'blog:detail' laatsteblog.id %}">{{ laatsteblog.title }}</a></h4>
+							<div class="card-text">
+								<div class="excerpt mb-3"> {{ laatsteblog.description|striptags|truncatechars:170 }} </div>
+								<a class="btn btn-primary d-none d-md-inline-block" href="{% url 'blog:detail' laatsteblog.id %}">Read more</a>
+							</div>
+						</div>
+						<div class="card-footer border-0 d-md-none">
+							<ul class="meta list-inline mb-0">
+								<li class="list-inline-item mr-3"><i class="far fa-clock mr-2"></i>June 18, 2018</li>
+								<li class="list-inline-item"><i class="fas fa-comment mr-2"></i><a href="#">8 Comments</a></li>
+							</ul>
+						</div>
+				    </div><!--//card-->
+		        </div>
+
+
+            {% for blog in blogs %}
+
+
+		        <div class="col-12 col-md-6 col-lg-4 mb-5">
+			        <div class="card rounded-0 border-0 shadow-sm eq-height">
+						<div class="card-img-container position-relative">
+					        <img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/blog/blog-post-thumb-2.jpg" %}" alt="">
+					        <div class="card-img-overlay overlay-mask text-center p-0">
+						        <div class="overlay-mask-content text-center w-100 position-absolute">
+								    <a class="btn btn-primary" href="{% url 'blog:detail' blog.id %}">Read more</a>
+						        </div>
+						        <a class="overlay-mask-link position-absolute w-100 h-100" href="{% url 'blog:detail' blog.id %}"></a>
+							</div>
+						</div>
+						<div class="card-body pb-4">
+
+							<h4 class="card-title mb-2"><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></h4>
+							<div class="card-text">
+
+								<div class="excerpt"> {{ blog.description|striptags|truncatechars:150 }} </div>
+							</div>
+
+						</div>
+						<div class="card-footer border-0">
+							<ul class="meta list-inline mb-0">
+								<li class="list-inline-item mr-3"><i class="far fa-clock mr-2"></i>June 18, 2018</li>
+								<li class="list-inline-item"><i class="fas fa-comment mr-2"></i><a href="#">12 Comments</a></li>
+							</ul>
+						</div>
+				    </div><!--//card-->
+		        </div>
+
+            {% endfor %}
+
+
+
+
+		        <div class="col-12 mb-5">
+			        <a class="btn-blog-more btn btn-primary btn-block text-white font-weight-bold">Load more posts...</a>
+		        </div>
+
+	        </div>
+        </div><!--//container-->
+    </section><!--//section-->
+
+
+	<section class="section py-5 bg-primary text-white">
+		<div class="container">
+			<div class="text-center">
+			    <img class="profile-small d-inline-block mx-auto rounded-circle mb-2" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
+		    </div>
+		    <h3 class="section-title font-weight-bold text-center mb-2">Interested in hiring me for your project?</h3>
+		    <div class="section-intro mx-auto text-center mb-3">
+			    Looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at <a class="link-on-bg" href="#">steve.doe@youremail.com</a> or use the <a class="link-on-bg" href="contact.html">form on the contact page</a>.
+		    </div>
+		    <div class="text-center">
+		        <a class="theme-btn-on-bg btn" href="contact.html">Let's Talk</a>
+		    </div>
+		</div><!--//container-->
+	</section>
+
+    <footer class="footer text-light text-center py-2">
+	    <small class="copyright">Template Copyright &copy; <a class="text-light" href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a></small>
+    </footer>
 
 {% endblock %}
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/jquery-3.4.1.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/popper.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/bootstrap/js/bootstrap.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/back-to-top.js" %}"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{% static "portfolio/assets/js/main.js" %}"></script>
+
+
+
+</body>
+</html>

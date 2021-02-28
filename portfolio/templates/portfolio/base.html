@@ -1,62 +1,103 @@
 {% load static %}
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Adjay Thakoerdien</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adjay Thakoerdien">
+    <meta name="author" content="Adjay Thakoerdien">
+    <link rel="shortcut icon" href="{% static "portfolio/Logo.png" %}">
 
-  <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
+    <!-- Google Font -->
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- FontAwesome JS -->
+    <script defer src="{% static "portfolio/assets/fontawesome/js/all.js" %}"></script>
 
-  <link rel="icon" type="image/png" href="{% static "portfolio/Logo.png" %}">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static "portfolio/assets/plugins/flickity/flickity.min.css" %}">
 
-  <title>Adjay Thakoerdien</title>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="{% static "portfolio/assets/css/theme-1.css" %}">
+
 </head>
 
 <body>
 
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static "portfolio/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Nick's Logo">
-        <span>Adjay Thakoerdien</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse text-center" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">About</a>
-          </li> -->
-          <li class="nav-item">
-            <a class="nav-link" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">Curriculum vitae</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/adjay-thakoerdien-b8a721ba/" target="_blank">LinkedIn</a>
-          </li>
-          <li>
-            <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Blog</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="container">
+    <header class="header">
+
+        <div class="top-bar theme-bg-primary-darken">
+
+            <div class="container-fluid">
+
+				<nav class="navbar navbar-expand-lg navbar-dark position-relative">
+
+
+					<ul class="social-list list-inline mb-0">
+			            <!-- <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-twitter fa-fw"></i></a></li> -->
+		                <li class="list-inline-item"><a class="text-white" href="https://www.linkedin.com/in/adjaythakoerdien/" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a class="text-white" href="https://github.com/adjaythakoerdien" target="_blank"><i class="fab fa-github-alt fa-fw"></i></a></li>
+		                <li class="list-inline-item"><a class="text-white" href="https://www.instagram.com/adjaythakoerdien/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a class="text-white" href="https://www.facebook.com/adjaythakoerdien" target="_blank"><i class="fab fa-facebook fa-fw"></i></a></li>
+		            </ul><!--//social-list-->
+
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse text-uppercase" id="navigation">
+						<ul class="navbar-nav ml-lg-auto">
+							<li class="nav-item active mr-lg-3">
+							    <a class="nav-link" href="{% url 'home' %} " >About <span class="sr-only">(current)</span></a>
+							</li>
+							<!-- <li class="nav-item mr-lg-3">
+							   <a class="nav-link" href="projects.html">Projects</a>
+							</li> -->
+							<!-- <li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="talks.html">Talks</a>
+							</li> -->
+							<li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
+							</li>
+							<li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">Resume</a>
+							</li>
+							<li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+							</li>
+
+
+							<!-- <li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="contact.html">Contact</a>
+							</li> -->
+							<!-- <li class="nav-item dropdown mr-0">
+							    <a class="nav-link dropdown-toggle" href="#" id="navigationLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Pages
+								</a>
+								<div class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg" aria-labelledby="navigationLink">
+									<a class="dropdown-item" href="project.html">Project Case Study (1 Column)</a>
+									<a class="dropdown-item" href="project-alt.html">Project Case Study (2 Columns)</a>
+									<a class="dropdown-item" href="blog-post.html">Blog Post</a>
+								</div>
+							</li> -->
+
+						</ul>
+						<span id="slide-line"></span>
+					</div>
+
+
+
+				</nav>
+
+            </div><!--//container-->
+
+        </div><!--//top-bar-->
+
     {% block content %}{% endblock %}
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-
-</html>
