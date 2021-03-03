@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4020e4e9-693e-4b3e-ba38-4b354d70e8a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/templates/portfolio/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,8 +58,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613661890088</updated>
+      <workItem from="1614678162242" duration="529000" />
+      <workItem from="1614777452513" duration="82000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
