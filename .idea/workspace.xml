@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4020e4e9-693e-4b3e-ba38-4b354d70e8a1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/todo/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/personal_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/personal_portfolio/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo/templates/todo/viewtodo.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo/templates/todo/viewtodo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,7 @@
       <workItem from="1614777452513" duration="430000" />
       <workItem from="1615311777533" duration="2718000" />
       <workItem from="1615314978802" duration="93000" />
-      <workItem from="1615368443412" duration="2219000" />
+      <workItem from="1615368443412" duration="3063000" />
     </task>
     <servers />
   </component>
