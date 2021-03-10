@@ -54,17 +54,14 @@
 
 					<div class="collapse navbar-collapse text-uppercase" id="navigation">
 						<ul class="navbar-nav ml-lg-auto">
-              <li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="{% url 'home' %} " >About </a>
+							<li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="{% url 'home' %} " >About <span class="sr-only">(current)</span></a>
 							</li>
-							<!-- <li class="nav-item mr-lg-3">
-							   <a class="nav-link" href="projects.html">Projects</a>
-							</li> -->
-							<!-- <li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="talks.html">Talks</a>
-							</li> -->
-              <li class="nav-item active mr-lg-3">
-							    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog <span class="sr-only">(current)</span></a>
+							<li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="{% url 'todo:home' %}" target="_blank">Todo</a>
+							</li>
+							<li class="nav-item active mr-lg-3">
+							    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
 							</li>
 							<li class="nav-item mr-lg-3">
 							    <a class="nav-link" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">Resume</a>
@@ -72,20 +69,6 @@
 							<li class="nav-item mr-lg-3">
 							    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
 							</li>
-							<!-- <li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="contact.html">Contact</a>
-							</li> -->
-							<!-- <li class="nav-item dropdown mr-0">
-							    <a class="nav-link dropdown-toggle" href="#" id="navigationLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Pages
-								</a>
-								<div class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg" aria-labelledby="navigationLink">
-									<a class="dropdown-item" href="project.html">Project Case Study (1 Column)</a>
-									<a class="dropdown-item" href="project-alt.html">Project Case Study (2 Columns)</a>
-									<a class="dropdown-item" href="blog-post.html">Blog Post</a>
-								</div>
-							</li> -->
-
 						</ul>
 						<span id="slide-line"></span>
 					</div>

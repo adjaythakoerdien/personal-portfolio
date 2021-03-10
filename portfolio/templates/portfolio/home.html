@@ -57,13 +57,10 @@
 							<li class="nav-item active mr-lg-3">
 							    <a class="nav-link" href="{% url 'home' %} " >About <span class="sr-only">(current)</span></a>
 							</li>
-							<!-- <li class="nav-item mr-lg-3">
-							   <a class="nav-link" href="projects.html">Projects</a>
-							</li> -->
-							<!-- <li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="talks.html">Talks</a>
-							</li> -->
-              <li class="nav-item mr-lg-3">
+							<li class="nav-item mr-lg-3">
+							    <a class="nav-link" href="{% url 'todo:home' %}" target="_blank">Todo</a>
+							</li>
+							<li class="nav-item mr-lg-3">
 							    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
 							</li>
 							<li class="nav-item mr-lg-3">
@@ -72,20 +69,6 @@
 							<li class="nav-item mr-lg-3">
 							    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
 							</li>
-							<!-- <li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="contact.html">Contact</a>
-							</li> -->
-							<!-- <li class="nav-item dropdown mr-0">
-							    <a class="nav-link dropdown-toggle" href="#" id="navigationLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Pages
-								</a>
-								<div class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg" aria-labelledby="navigationLink">
-									<a class="dropdown-item" href="project.html">Project Case Study (1 Column)</a>
-									<a class="dropdown-item" href="project-alt.html">Project Case Study (2 Columns)</a>
-									<a class="dropdown-item" href="blog-post.html">Blog Post</a>
-								</div>
-							</li> -->
-
 						</ul>
 						<span id="slide-line"></span>
 					</div>
@@ -103,13 +86,12 @@
 		        <div class="profile-teaser media flex-column flex-md-row">
 				    <img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
 					<div class="media-body text-center text-md-left">
-					<div class="lead">Hello, my name is</div>
+<!--					<div class="lead">Hello, my name is</div>-->
 					<h2 class="mt-0 display-4 font-weight-bold">Adjay Thakoerdien</h2>
 					<div class="bio mb-3">
-            I'm a full-stack developer specialised in backend development.
-            You can check out my example for my blog on <a class="link-on-bg" href="{% url 'blog:all_blogs' %}">my blog</a>.
+            Full-stack developer specialised in frontend and backend development.
             Want to know how I may help your project?
-            Check out my project <a class="link-on-bg" href="#">case studies</a> and
+            Check out my projects and
             <a class="link-on-bg" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">resume</a>.
 					</div><!--//bio-->
 					<a class="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="{% url 'contact' %}">Hire Me</a>
@@ -126,10 +108,11 @@
         <div class="container">
 	        <h3 class="section-title font-weight-bold text-center mb-3">Skills Overview</h3>
 	        <div class="section-intro mx-auto text-center mb-5 text-secondary">
-            I have more than 4 years of experience building web applications for my clients.
-            My mainfocus is Python, PostgreSQL and Django. I'm also skilled in PHP and MySQL.
-            Below is a quick overview of my main technical skill sets and tools I use.
-            Want to find out more about my experience? <a href="resume.html">Check out my online resume</a>.</div>
+            I have a couple of years experience building web applications.
+            My mainfocus is Python, PostgreSQL and Django.
+            Below is a quick overview of my main technical skillsets and tools I use.
+<!--            Want to find out more about my experience? <a href="resume.html">Check out my online resume</a>.-->
+			</div>
 
 	        <div class="skills-blocks mx-auto pt-5">
 		        <div class="row">
@@ -188,60 +171,8 @@
         </div><!--//container-->
     </section><!--//skills-section-->
 
-    <section class="section-proof section bg-white py-5">
-        <div class="container">
-	        <h3 class="section-title font-weight-bold text-center mb-5">Great clients I've worked with</h3>
-	        <!-- <div class="logos row mb-5">
-		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-1.svg" %}"></a></div>
-		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-2.svg" %}"></a></div>
-		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-3.svg" %}"></a></div>
-		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-4.svg" %}"></a></div>
-		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-5.svg" %}"></a></div>
-		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-6.svg" %}"></a></div>
-	        </div> -->
 
-
-        </div>
-
-        <div class="container-fluid">
-
-	        <div class="testimonials">
-            {% for testimonial in testimonials %}
-
-
-		        <div class="testimonial-item">
-			        <div class="position-relative p-5 shadow">
-				        <blockquote class="blockquote pl-4">
-						  <p class="mb-4">{{ testimonial.text }}</p>
-						  <i class="quote-icon fas fa-quote-left fa-lg position-absolute text-primary"></i>
-						  <footer class="blockquote-footer presudo-hidden">
-							   <div class="media client-profile flex-column flex-md-row">
-								   <img class="mr-md-3" src="{{ testimonial.image.url }}" alt="">
-							       <cite title="Source" class="quote-source d-inline-block font-style-normal pt-3">
-							           <span class="d-block">{{ testimonial.name }}</span>
-							           <span class="d-block">{{ testimonial.function }}, {{ testimonial.company }}</span>
-							           <span class="d-block position-absolute source-link"><i class="fab fa-linkedin fa-2x mr-1" data-fa-transform="down-3"></i> <a class="text-secondary" href="{{ testimonial.link }}" target="_blank">View <i class="fas fa-external-link-alt ml-1" data-fa-transform="up-1"></i></a></span>
-							       </cite>
-							   </div><!--//media-->
-						  </footer>
-						</blockquote>
-			        </div>
-		        </div><!--//testimonial-item-->
-            {% endfor %}
-
-
-
-
-
-
-
-	        </div><!--//container-fluid-->
-
-
-        </div><!--//testimonials-->
-
-
-    </section>
+	<!-- PROJECTS -->
 
     <section class="section-featured-projects py-5">
         <div class="container">
@@ -253,11 +184,11 @@
 						<div class="card-img-container position-relative">
 							<img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/projects/project-1-thumb.jpg" %}" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
-								<div class="project-logo"><img class="img-fluid w-50" src="{% static "portfolio/assets/images/logos/project-blog.png" %}"></div>
+<!--								<div class="project-logo"><img class="img-fluid w-50" src="{% static "portfolio/assets/images/logos/project-blog.png" %}"></div>-->
 							</div>
 							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{% url 'blog:all_blogs' %}">
 								<h5 class="card-title font-weight-bold">Project: Blog</h5>
-							    <p class="card-text">Made a fully function blog with Django.</p>
+							    <p class="card-text">Fully functioning blog made with Django.</p>
 							</a>
 						</div>
 						<div class="card-body pb-0">
@@ -278,11 +209,11 @@
 						<div class="card-img-container position-relative">
 							<img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/projects/project-2-thumb.jpg" %}" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
-								<div class="project-logo"><img class="img-fluid w-50" src="{% static "portfolio/assets/images/logos/project-todo.png" %}"></div>
+<!--								<div class="project-logo"><img class="img-fluid w-50" src="{% static "portfolio/assets/images/logos/project-todo.png" %}"></div>-->
 							</div>
 							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{% url 'todo:home' %}" target="_blank">
-								<h5 class="card-title font-weight-bold">Project: Todo</h5>
-							    <p class="card-text">A webapp made in Django for making and keeping track of your todo list. Including signup for an account and making, editting and deleting todo entries.</p>
+								<h5 class="card-title font-weight-bold">Webapp: Todo</h5>
+							    <p class="card-text">Signup for an account and make, edit and complete your todos!</p>
 							</a>
 						</div>
 						<div class="card-body pb-0">
@@ -303,11 +234,12 @@
 						<div class="card-img-container position-relative">
 							<img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/projects/project-3-thumb.jpg" %}" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
-								<div class="project-logo"><img class="img-fluid w-50" src="{% static "portfolio/assets/images/logos/project-poll.png" %}"></div>
+<!--								<div class="project-logo"><img class="img-fluid w-50" src="{% static "portfolio/assets/images/logos/project-poll.png" %}"></div>-->
 							</div>
 							<a class="card-img-overlay overlay-content text-left p-lg-4" href="#">
 								<h5 class="card-title font-weight-bold">Webapp: Poll</h5>
-							    <p class="card-text">Poll made with Python and ProgreSQL</p>
+							    <p class="card-text">Poll made with Python and ProgreSQL. <br><br>
+									This app will be available soon!</p>
 							</a>
 						</div>
 						<div class="card-body pb-0">
@@ -325,9 +257,9 @@
 		        </div>
 
 	        </div><!--//row-->
-	        <div class="text-center">
-	            <a class="btn btn-primary" href="#">View all projects</a>
-	        </div>
+<!--	        <div class="text-center">-->
+<!--	            <a class="btn btn-primary" href="#">View all projects</a>-->
+<!--	        </div>-->
         </div><!--///container-->
 
     </section>
@@ -382,6 +314,63 @@
 
 
     </section>
+
+
+	    <section class="section-proof section bg-white py-5">
+        <div class="container">
+	        <h3 class="section-title font-weight-bold text-center mb-5">Great clients I've worked with</h3>
+	        <!-- <div class="logos row mb-5">
+		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-1.svg" %}"></a></div>
+		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-2.svg" %}"></a></div>
+		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-3.svg" %}"></a></div>
+		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-4.svg" %}"></a></div>
+		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-5.svg" %}"></a></div>
+		        <div class="logo px-3 col-6 col-md-4 col-lg-2 mr-0 px-md-5 px-lg-4"><a class="logo-link" href="project.html"><img class="img-fluid svg-ie-fix" src="{% static "portfolio/assets/images/logos/logo-6.svg" %}"></a></div>
+	        </div> -->
+
+
+        </div>
+
+        <div class="container-fluid">
+
+	        <div class="testimonials">
+            {% for testimonial in testimonials %}
+
+
+		        <div class="testimonial-item">
+			        <div class="position-relative p-5 shadow">
+				        <blockquote class="blockquote pl-4">
+						  <p class="mb-4">{{ testimonial.text }}</p>
+						  <i class="quote-icon fas fa-quote-left fa-lg position-absolute text-primary"></i>
+						  <footer class="blockquote-footer presudo-hidden">
+							   <div class="media client-profile flex-column flex-md-row">
+								   <img class="mr-md-3" src="{{ testimonial.image.url }}" alt="">
+							       <cite title="Source" class="quote-source d-inline-block font-style-normal pt-3">
+							           <span class="d-block">{{ testimonial.name }}</span>
+							           <span class="d-block">{{ testimonial.function }}, {{ testimonial.company }}</span>
+							           <span class="d-block position-absolute source-link"><i class="fab fa-linkedin fa-2x mr-1" data-fa-transform="down-3"></i> <a class="text-secondary" href="{{ testimonial.link }}" target="_blank">View <i class="fas fa-external-link-alt ml-1" data-fa-transform="up-1"></i></a></span>
+							       </cite>
+							   </div><!--//media-->
+						  </footer>
+						</blockquote>
+			        </div>
+		        </div><!--//testimonial-item-->
+            {% endfor %}
+
+
+
+
+
+
+
+	        </div><!--//container-fluid-->
+
+
+        </div><!--//testimonials-->
+
+
+    </section>
+
 
     <!-- <section class="section-press py-5 bg-white">
         <div class="container">
