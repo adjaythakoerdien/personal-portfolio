@@ -21,7 +21,7 @@ def loginuser(request):
             return render(request,'todo/loginuser.html', {'form':AuthenticationForm(),'error':'Username and password did not match'})
         else:
             login(request, user)
-            return redirect('currenttodos')
+            return redirect('todo:currenttodos')
 
 
 def signupuser(request):
@@ -33,7 +33,7 @@ def signupuser(request):
                 user = User.objects.create_user(request.POST['username'], password=request.POST['password1'])
                 user.save()
                 login(request, user)
-                return redirect('currenttodos')
+                return redirect('todo:currenttodos')
             except IntegrityError:
                 return render(request,'todo/signupuser.html', {'form':UserCreationForm(),'error':'That username has already been taken. Please choose a new username'})
 
@@ -44,7 +44,7 @@ def signupuser(request):
 def logoutuser(request):
     if request.method == 'POST':
         logout(request)
-        return redirect('home')
+        return redirect('todo:home')
 
 @login_required
 def currenttodos(request):
@@ -66,7 +66,7 @@ def viewtodo(request, todo_pk):
         try:
             form = Todoform(request.POST, instance=todo)
             form.save()
-            return redirect('currenttodos')
+            return redirect('todo:currenttodos')
         except ValueError:
             return render(request, 'todo/viewtodo.html', {'todo':todo, 'form':form, 'error':'Bad info'})
 
@@ -80,7 +80,7 @@ def createtodo(request):
             newtodo = form.save(commit=False)
             newtodo.user = request.user
             newtodo.save()
-            return redirect('currenttodos')
+            return redirect('todo:currenttodos')
         except ValueError:
             return render(request,'todo/createtodo.html', {'form':Todoform(),'error':'Bad data put in. Try again!'})
 
@@ -90,14 +90,14 @@ def completetodo(request, todo_pk):
     if request.method == 'POST':
         todo.datecompleted = timezone.now()
         todo.save()
-        return redirect('currenttodos')
+        return redirect('todo:currenttodos')
 
 @login_required
 def deletetodo(request, todo_pk):
     todo = get_object_or_404(Todo, pk=todo_pk, user=request.user)
     if request.method == 'POST':
         todo.delete()
-        return redirect('currenttodos')
+        return redirect('todo:currenttodos')
 
 
 
