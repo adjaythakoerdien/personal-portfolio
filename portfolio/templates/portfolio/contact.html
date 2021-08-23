@@ -1,86 +1,8 @@
-
+{% extends "portfolio/base.html" %}
 
 {% load static %}
 
-<html lang="en">
-<head>
-    <title>Adjay Thakoerdien</title>
-
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adjay Thakoerdien">
-    <meta name="author" content="Adjay Thakoerdien">
-    <link rel="shortcut icon" href="{% static "portfolio/Logo.png" %}">
-
-    <!-- Google Font -->
-    <link href='//fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- FontAwesome JS -->
-    <script defer src="{% static "portfolio/assets/fontawesome/js/all.js" %}"></script>
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="{% static "portfolio/assets/plugins/flickity/flickity.min.css" %}">
-
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="{% static "portfolio/assets/css/theme-1.css" %}">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <div class="top-bar theme-bg-primary-darken">
-
-            <div class="container-fluid">
-
-				<nav class="navbar navbar-expand-lg navbar-dark position-relative">
-
-
-					<ul class="social-list list-inline mb-0">
-			            <!-- <li class="list-inline-item"><a class="text-white" href="#"><i class="fab fa-twitter fa-fw"></i></a></li> -->
-		                <li class="list-inline-item"><a class="text-white" href="https://www.linkedin.com/in/adjaythakoerdien/" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a class="text-white" href="https://github.com/adjaythakoerdien" target="_blank"><i class="fab fa-github-alt fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a class="text-white" href="https://www.instagram.com/adjaythakoerdien/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
-                    <li class="list-inline-item"><a class="text-white" href="https://www.facebook.com/adjaythakoerdien" target="_blank"><i class="fab fa-facebook fa-fw"></i></a></li>
-		            </ul><!--//social-list-->
-
-
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
-
-					<div class="collapse navbar-collapse text-uppercase" id="navigation">
-						<ul class="navbar-nav ml-lg-auto">
-							<li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="{% url 'home' %} " >About <span class="sr-only">(current)</span></a>
-							</li>
-							<li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="{% url 'todo:home' %}" target="_blank">Todo</a>
-							</li>
-							<li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
-							</li>
-							<li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">Resume</a>
-							</li>
-							<li class="nav-item active mr-lg-3">
-							    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-							</li>
-						</ul>
-						<span id="slide-line"></span>
-					</div>
-
-
-
-				</nav>
-
-            </div><!--//container-->
-
-        </div><!--//top-bar-->
+{% block content %}
 
         <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container">
@@ -96,11 +18,16 @@
             <div class="row">
 		        <div class="contact-intro col-lg-8 mx-lg-auto mb-5 text-center">
 
-			        <img class="profile-small d-inline-block mx-auto rounded-circle mb-3" src="{% static "portfolio/assets/images/profile_nw.jpg" %}" alt="">
+			        <img class="profile-small d-inline-block mx-auto rounded-circle mb-3" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
 
 			        <div class="speech-bubble bg-white p-4 p-lg-5 shadow-sm">
-				        <p class="text-left mb-3">Momenteel beschikbaar voor werk. Vul onderstaande formulier in of stuur mij een mailtje op: <a href="mailto:a.thakoerdien@gmail.com" target="_blank">a.thakoerdien@gmail.com</a>.<br>
-				        Bekijk ook  mijn <a href="#">portfolio projecten</a> en <a href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">CV</a> om te zien wat ik voor jouw onderneming kan betekenen.</p>
+				        <p class="text-center mb-3">
+				        	Momenteel beschikbaar voor werk.
+				        </p>
+				        <p class="text-left mb-3">
+				        	Vul onderstaande formulier in of stuur mij een mailtje op: <a href="mailto:a.thakoerdien@gmail.com" target="_blank">a.thakoerdien@gmail.com</a>.<br>
+				        	Bekijk ook  mijn <a href="#">portfolio projecten</a> en <a href="{% static "portfolio/cv_adjay_thakoerdien_2020_08.pdf" %}" target="_blank">CV</a> om te zien wat ik voor jouw onderneming kan betekenen.
+				        </p>
 				        <h6 class="font-weight-bold text-center mb-3">Je kunt me ook vinden op:</h6>
 
 				        <ul class="social-list-color list-inline mb-0">
@@ -166,7 +93,7 @@
     <script type="text/javascript" src="{% static "portfolio/assets/js/main.js" %}"></script>
     <script type="text/javascript" src="{% static "portfolio/assets/js/form.js" %}"></script>
 
-
+{% endblock %}
 
 
 </body>

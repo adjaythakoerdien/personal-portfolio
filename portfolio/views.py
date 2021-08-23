@@ -11,9 +11,9 @@ def home(request):
     lijst = lijststr.split(", ")
 
     return render(request, 'portfolio/home.html',
-    {'testimonials':testimonials,'projects':projects,'blogs':blogs,'lijst':lijst})
+    {'testimonials':testimonials,'projects':projects,'blogs':blogs,'lijst':lijst, 'pagina': 'home'})
 
 def contact(request):
-    return render(request, 'portfolio/contact.html')
+    return render(request, 'portfolio/contact.html', {'pagina': 'contact'})
 
 
