@@ -5,24 +5,24 @@
 {% block content %}
 
 
-        <div class="header-intro theme-bg-primary text-white py-5">
-	        <div class="container position-relative">
-		        <div class="media flex-column flex-md-row">
-              <img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
-			        <div class="media-body align-self-center">
-			            <h2 class="page-heading mb-2">Adjay Thakoerdien's Blog</h2>
-			            <div class="page-heading-tagline mb-3">I write about web development and my life as a developer. <br class="d-lg-block d-none">You can follow me via the various channels below:</div>
-			            <ul class="social-list-square list-inline mb-0">
-			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://www.linkedin.com/in/adjaythakoerdien/" target="_blank"><i class="fab fa-linkedin-in fa-fw text-white"></i></a></li>
-			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://github.com/adjaythakoerdien" target="_blank"><i class="fab fa-github-alt fa-fw text-white"></i></a></li>
-			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://www.instagram.com/adjaythakoerdien/" target="_blank"><i class="fab fa-instagram fa-fw text-white"></i></a></li>
-			                <li class="list-inline-item mb-3 mb-lg-0"><a href="https://www.facebook.com/adjaythakoerdien" target="_blank"><i class="fab fa-facebook fa-fw text-white"></i></a></li>
+                <div class="header-intro theme-bg-primary text-white py-5">
+	        <div class="container">
+		        <div class="profile-teaser media flex-column flex-md-row">
+				    <img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{% static "portfolio/assets/images/profile_nw.jpg" %}" alt="">
+						<div class="media-body text-center text-md-left">
 
+							<h2 class="mt-0 display-4 font-weight-bold">Adjay Thakoerdien</h2>
+								<div class="bio mb-3">
+			                        Ambitieuze en enthousiaste data scientist met een passie voor machine learning op zoek naar nieuwe carrièrekansen in de wereld van data.
+			                        Bedreven in inzichten uit data naar te voren brengen middels verschillende statistische modellen.
+			                       
+			                        Download hier mijn
+			                        <a class="link-on-bg" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">CV</a>
+								</div><!--//bio-->
+									<a class="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="{% url 'contact' %}">Stuur mij een berichtje</a>
 
-			            </ul><!--//social-list-->
-			        </div>
-		        </div>
-
+						</div><!--//media-body-->
+				</div><!--//profile-teaser-->
 
 	        </div><!--//container-->
         </div><!--//header-intro-->
@@ -108,7 +108,7 @@
 	<section class="section py-5 bg-primary text-white">
 		<div class="container">
 			<div class="text-center">
-			    <img class="profile-small d-inline-block mx-auto rounded-circle mb-2" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
+			    <img class="profile-small d-inline-block mx-auto rounded-circle mb-2" src="{% static "portfolio/assets/images/profile_nw.jpg" %}" alt="">
 		    </div>
 		    <h3 class="section-title font-weight-bold text-center mb-2">Interested in hiring me for your project?</h3>
 		    <div class="section-intro mx-auto text-center mb-3">
