@@ -59,17 +59,22 @@
 								{% endif %} >
 							    <a class="nav-link" href="{% url 'home' %} " >Over mij <span class="sr-only">(current)</span></a>
 							</li>
-							<li class="nav-item mr-lg-3">
-							    <a class="nav-link" href="{% url 'todo:home' %}" target="_blank">Todo</a>
-							</li>
-							<li {% if pagina == 'blog' %} class="nav-item active mr-lg-3" 
+						<!-- 	<li {% if pagina == 'blog' %} class="nav-item active mr-lg-3" 
 								{% else %} class="nav-item mr-lg-3"
 								{% endif %} >
 							    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
 							
-							</li>
+							</li> -->
 							<li class="nav-item mr-lg-3">
 							    <a class="nav-link" href="{% static "portfolio/cv_adjay_thakoerdien_2020_08.pdf" %}" target="_blank">Download CV</a>
+							</li>
+							<li class="nav-item dropdown mr-0">
+							    <a class="nav-link dropdown-toggle" href="#" id="navigationLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Projecten
+								</a>
+								<div class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg" aria-labelledby="navigationLink">
+									<a class="dropdown-item" href="{% url 'todo:home' %}" target="_blank">Webapp: Todo</a>
+								</div>
 							</li>
 							<li {% if pagina == 'contact' %} class="nav-item active mr-lg-3" 
 								{% else %} class="nav-item mr-lg-3"
