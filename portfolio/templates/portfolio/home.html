@@ -110,13 +110,13 @@
 							<img class="card-img-top rounded-0" src="{{ project.image.url }}" %}" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
 							</div>
-							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{% url 'blog:all_blogs' %}">
+							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{{ project.url }}">
 								<h5 class="card-title font-weight-bold">{{ project.title }}</h5>
 							    <p class="card-text">{{ project.description|safe }}</p>
 							</a>
 						</div>
 						<div class="card-body pb-0">
-							<h4 class="card-title text-truncate text-center mb-0"><a href="{% url 'blog:all_blogs' %}">{{ project.title }}</a></h4>
+							<h4 class="card-title text-truncate text-center mb-0"><a href="{{ project.url }}">{{ project.title }}</a></h4>
 						</div>
 
 						<div class="card-footer border-0 text-center bg-white pb-4">

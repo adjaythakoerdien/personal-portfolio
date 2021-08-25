@@ -6,7 +6,7 @@ from blog.models import Blogpost
 def home(request):
     intro = Intro.objects.all()
     testimonials = Testimonial.objects.all()
-    projects = Project.objects.all()
+    projects = Project.objects.all().filter(uitgelicht=True)
     blogs = Blogpost.objects.order_by('-date')[:2]
     vaardigheid_web = Vaardigheid_web.objects.all()
     vaardigheid_data = Vaardigheid_data.objects.all()
