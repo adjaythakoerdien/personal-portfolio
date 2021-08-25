@@ -5,28 +5,26 @@
 {% block content %}
 
 
-                <div class="header-intro theme-bg-primary text-white py-5">
+        <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container">
+	        	{% for intr in intro %}
 		        <div class="profile-teaser media flex-column flex-md-row">
-				    <img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
+		        	<img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{{ intr.image.url }}" alt="">
 						<div class="media-body text-center text-md-left">
 
-							<h2 class="mt-0 display-4 font-weight-bold">Adjay Thakoerdien</h2>
+							
+							<h2 class="mt-0 display-4 font-weight-bold">{{ intr.name }}</h2>
 								<div class="bio mb-3">
-			                        Ambitieuze en enthousiaste data scientist met een passie voor machine learning op zoek naar nieuwe carrièrekansen in de wereld van data.
-			                        Bedreven in inzichten uit data naar te voren brengen middels verschillende statistische modellen.
-			                       
-			                        Download hier mijn
-			                        <a class="link-on-bg" href="{% static "portfolio/cv_adjay_thakoerdien.pdf" %}" target="_blank">CV</a>
+			                        {{ intr.text|safe }}
 								</div><!--//bio-->
-									<a class="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="{% url 'contact' %}">Stuur mij een berichtje</a>
+									<a class="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="{{ intr.button_link }}">{{ intr.button_text }}</a>
+				{% endfor %}
 
 						</div><!--//media-body-->
 				</div><!--//profile-teaser-->
 
 	        </div><!--//container-->
         </div><!--//header-intro-->
-
     </header><!--//header-->
 
     <section class="section pt-5">
