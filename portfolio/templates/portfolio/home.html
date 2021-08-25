@@ -6,19 +6,18 @@
 
         <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container">
+	        	{% for intr in intro %}
 		        <div class="profile-teaser media flex-column flex-md-row">
-				    <img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
+		        	<img class="profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto" src="{{ intr.image.url }}" alt="">
 						<div class="media-body text-center text-md-left">
 
-							<h2 class="mt-0 display-4 font-weight-bold">Adjay Thakoerdien</h2>
+							
+							<h2 class="mt-0 display-4 font-weight-bold">{{ intr.name }}</h2>
 								<div class="bio mb-3">
-			                        Ambitieuze en enthousiaste data scientist met een passie voor machine learning op zoek naar nieuwe carrièrekansen in de wereld van data.
-			                        Bedreven in inzichten uit data naar te voren brengen middels verschillende statistische modellen.
-			                       
-			                        Download hier mijn
-			                        <a class="link-on-bg" href="{% static "portfolio/cv_adjay_thakoerdien_2020_08.pdf" %}" target="_blank">CV</a>
+			                        {{ intr.text|safe }}
 								</div><!--//bio-->
-									<a class="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="{% url 'contact' %}">Stuur mij een berichtje</a>
+									<a class="theme-btn-on-bg btn font-weight-bold theme-btn-cta" href="{{ intr.button_link }}">{{ intr.button_text }}</a>
+				{% endfor %}
 
 						</div><!--//media-body-->
 				</div><!--//profile-teaser-->
@@ -33,8 +32,26 @@
 	        <h3 class="section-title font-weight-bold text-center mb-3">Vaardigheden</h3>
 
 
+	        
 	        <div class="skills-blocks mx-auto pt-5">
 		        <div class="row">
+
+		        	<div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
+				        <div class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
+					        <h4 class="skills-cat text-center mb-3 mt-5">Data</h4>
+					        <div class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
+					            <img class="skills-icon" src="{% static "portfolio/assets/images/frontend-icon.svg" %}">
+					        </div>
+					        <ul class="skills-list list-unstyled text-secondary">
+
+					        {% for vaardigheid in vaardigheid_data %}
+						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>{{ vaardigheid }}</li>
+					        {% endfor %}	
+					        
+					        </ul>
+				        </div><!--//skills-block-inner-->
+			        </div><!--//skills-block-->
+
 			        <div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
 				        <div class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
 					        <h4 class="skills-cat text-center mb-3 mt-5">Web</h4>
@@ -42,45 +59,33 @@
 					            <img class="skills-icon" src="{% static "portfolio/assets/images/frontend-icon.svg" %}">
 					        </div>
 					        <ul class="skills-list list-unstyled text-secondary">
-						        <!-- <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>React/Redux/Angular</li> -->
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Bootstrap</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>HTML/PHP/CSS/JavaScript</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Django/Flask/FastAPI</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>PostgreSQL/MySQL</li>
+
+					        {% for vaardigheid in vaardigheid_web %}
+						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>{{ vaardigheid }}</li>
+					        {% endfor %}	
+
 					        </ul>
 				        </div><!--//skills-block-inner-->
 			        </div><!--//skills-block-->
 
 			        <div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
 				        <div class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-					        <h4 class="skills-cat text-center mb-3 mt-5">Data science</h4>
+					        <h4 class="skills-cat text-center mb-3 mt-5">Overig</h4>
 					        <div class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
-					            <img class="skills-icon" src="{% static "portfolio/assets/images/backend-icon.svg" %}">
+					            <img class="skills-icon" src="{% static "portfolio/assets/images/frontend-icon.svg" %}">
 					        </div>
 					        <ul class="skills-list list-unstyled text-secondary">
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Python</li>
-  						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Scikit-learn/TensorFlow/Keras</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Tableau/NumPy/Pandas</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Matplotlib/Seaborn</li>
 
+					        {% for vaardigheid in vaardigheid_overig %}
+						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>{{ vaardigheid }}</li>
+					        {% endfor %}	
+					        
 					        </ul>
 				        </div><!--//skills-block-inner-->
 			        </div><!--//skills-block-->
 
-			        <div class="skills-block col-12 col-lg-4">
-				        <div class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative">
-					        <h4 class="skills-cat text-center mb-3 mt-5">Others</h4>
-					        <div class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center">
-					            <img class="skills-icon" src="{% static "portfolio/assets/images/other-skills-icon.svg" %}">
-					        </div>
-					        <ul class="skills-list list-unstyled text-secondary">
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Lineare Algebra</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Statistiek</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>Github</li>
-						        <li class="mb-2"><i class="fas fa-check mr-2 text-primary"></i>CircleCI/Docker</li>
-					        </ul>
-				        </div><!--//skills-block-inner-->
-			        </div><!--//skills-block-->
+
+			        
 
 		        </div><!--//row-->
 	        </div>
