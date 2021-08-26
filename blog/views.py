@@ -8,7 +8,7 @@ def all_blogs(request):
     laatsteblog = Blogpost.objects.order_by('-date')[0]
 
     return render(request, 'blog/all_blogs.html', {'intro':intro,
-        'blogs':blogs,'laatsteblog':laatsteblog, 'pagina': 'blog'})
+        'blogs':blogs,'laatsteblog':laatsteblog})
 
 
 def detail(request, blog_id):
