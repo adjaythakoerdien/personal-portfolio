@@ -1,0 +1,97 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+        
+        <div class="header-intro theme-bg-primary text-white py-5">
+	        <div class="container">
+		        <h2 class="page-heading mb-3">Alle projecten</h2>
+		        <div class="page-heading-tagline">Hieronder vindt je een overzicht van mijn meest recente projecten.</div>
+		        
+	        </div><!--//container-->
+        </div><!--//header-intro-->
+        
+    </header><!--//header-->
+        
+    <section class="section-featured-projects py-5">
+        <div class="container">
+	        <h3 class="section-title font-weight-bold text-center mb-5">Alle projecten</h3>
+
+	        <div class="project-cards row mb-5">
+
+	        	{% for project in projects %}
+		        <div class="col-12 col-lg-4">
+
+
+					<div class="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
+						<div class="card-img-container position-relative">
+							<img class="card-img-top rounded-0" src="{{ project.image.url }}" %}" alt="">
+							<div class="card-img-overlay overlay-logo text-center">
+							</div>
+							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{{ project.url }}">
+								<h5 class="card-title font-weight-bold">{{ project.title }}</h5>
+							    <p class="card-text">{{ project.description|safe }}</p>
+							</a>
+						</div>
+						<div class="card-body pb-0">
+							<h4 class="card-title text-truncate text-center mb-0"><a href="{{ project.url }}">{{ project.title }}</a></h4>
+						</div>
+
+						<div class="card-footer border-0 text-center bg-white pb-4">
+							<ul class="list-inline mb-0 mx-auto">
+                    {% for ding in lijst %}
+						        <li class="list-inline-item"><span class="badge badge-secondary badge-pill">{{ ding }}</span></li>
+                    {% endfor %}
+							</ul>
+					    </div>
+				    </div><!--//card-->
+
+
+		        </div>
+		        {% endfor %}
+
+
+	        </div><!--//row-->
+<!--	        <div class="text-center">-->
+<!--	            <a class="btn btn-primary" href="#">View all projects</a>-->
+<!--	        </div>-->
+        </div><!--///container-->
+
+    </section>
+    
+        
+	<section class="section-cta py-5 bg-primary text-white">
+		<div class="container">
+			<div class="text-center">
+			    <img class="profile-small d-inline-block mx-auto rounded-circle mb-2" src="{% static "portfolio/assets/images/profile.jpg" %}" alt="">
+		    </div>
+		    <div class="text-center">
+		        <a class="theme-btn-on-bg btn" href="{% url 'contact' %}">Let's Talk</a>
+		    </div>
+		</div><!--//container-->
+	</section>
+    
+
+       
+    <!-- Javascript -->          
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/jquery-3.4.1.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/popper.min.js" %}"></script> 
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/bootstrap/js/bootstrap.min.js" %}"></script>  
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/back-to-top.js" %}"></script>    
+    
+    
+    <!--Page Specific JS -->
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/imagesloaded.pkgd.min.js" %}"></script> 
+    <script type="text/javascript" src="{% static "portfolio/assets/plugins/isotope.pkgd.min.js" %}"></script> 
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="{% static "portfolio/assets/js/main.js" %}"></script>
+    <script type="text/javascript" src="{% static "portfolio/assets/js/isotope-custom.js" %}"></script>
+    
+    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->    
+ {% endblock %}  
+
+</body>
+</html> 
+
