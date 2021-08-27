@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import Project, Testimonial, Vaardigheid_web, Vaardigheid_data, Vaardigheid_overig, Intro
+from .models import Testimonial, Vaardigheid_web, Vaardigheid_data, Vaardigheid_overig, Intro
 from blog.models import Blogpost
+from projects.models import Project
 
 # Create your views here.
 def home(request):
@@ -19,12 +20,4 @@ def home(request):
 
 
 def contact(request):
-
     return render(request, 'portfolio/contact.html', {'pagina': 'contact'})
-
-
-def projects(request):
-
-    projects = Project.objects.all()
-
-    return render(request, 'portfolio/projects.html', {'projects': projects})
