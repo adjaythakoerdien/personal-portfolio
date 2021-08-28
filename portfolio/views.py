@@ -14,9 +14,15 @@ def home(request):
     vaardigheid_data = Vaardigheid_data.objects.all()
     vaardigheid_overig = Vaardigheid_overig.objects.all()
 
-    return render(request, 'portfolio/home.html',
-    {'intro':intro,'testimonials':testimonials,'projects':projects,'blogs':blogs, 'pagina': 'home',
-    'vaardigheid_web':vaardigheid_web, 'vaardigheid_data':vaardigheid_data, 'vaardigheid_overig':vaardigheid_overig})
+    # lijst = []
+    # for project in projects:
+    #     lijst.append(str(project.technologies).split(', '))
+
+    return render(request, 'portfolio/home.html',{
+        'intro':intro,'testimonials':testimonials,'projects':projects,'blogs':blogs, 'pagina': 'home',
+        'vaardigheid_web':vaardigheid_web, 'vaardigheid_data':vaardigheid_data, 'vaardigheid_overig':vaardigheid_overig
+        }
+        )
 
 
 def contact(request):
