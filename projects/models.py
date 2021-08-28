@@ -12,6 +12,8 @@ class Project(models.Model):
     eind = models.TextField(blank=True)
     technologies = models.CharField(max_length=250)
     image = models.ImageField(upload_to="portfolio/images/")
+    image_2 = models.ImageField(upload_to="portfolio/images/", blank=True, default='portfolio/images/project-figure-main1.png')
+    image_3 = models.ImageField(upload_to="portfolio/images/", blank=True)
     url = models.TextField(blank=True, max_length=250)
     uitgelicht = models.BooleanField(default=False)
 
