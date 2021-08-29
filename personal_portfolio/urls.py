@@ -22,6 +22,7 @@ from portfolio import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/', views.contact, name='contact'),
+    path('send_mail/', views.send_gmail, name='send_mail'),
     path('', views.home, name='home'),
     path('blog/', include('blog.urls')),
     path('todo/', include('todo.urls')),

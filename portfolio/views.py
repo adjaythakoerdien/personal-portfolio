@@ -2,6 +2,10 @@ from django.shortcuts import render
 from .models import Testimonial, Vaardigheid_web, Vaardigheid_data, Vaardigheid_overig, Intro
 from blog.models import Blogpost
 from projects.models import Project
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
+import os
 
 # Create your views here.
 def home(request):
@@ -23,7 +27,26 @@ def home(request):
         'vaardigheid_web':vaardigheid_web, 'vaardigheid_data':vaardigheid_data, 'vaardigheid_overig':vaardigheid_overig
         }
         )
+def send_gmail(request):
+    if request.method=="POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        print(name, email, message)
 
+        send_mail(
+            name,
+            message,
+            email,
+            ['a.thakoerdien@gmail.com'],
+            fail_silently=False,
+        )
+
+        verzonden = "Je berichtje is verzonden!"
+        return render(request, 'portfolio/contact.html', {'pagina': 'contact', 'verzonden':verzonden})
+    else:
+        return render(request, 'portfolio/contact.html', {'pagina': 'contact',
+                                                          'verzonden':'Er ging iets mis, probeer het opnieuw..'})
 
 def contact(request):
     return render(request, 'portfolio/contact.html', {'pagina': 'contact'})

@@ -7,7 +7,9 @@
         <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container">
 		        <h2 class="page-heading mb-0">Contact</h2>
-
+				<p>
+					{{ verzonden }}
+				</p>
 	        </div><!--//container-->
         </div><!--//header-intro-->
 
@@ -44,26 +46,26 @@
 			        </div>
 
 		        </div><!--//contact-intro-->
-		        <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" target="_blank" action="mailto:a.thakoerdien@gmail.com">
-			        <h3 class="text-center mb-3">Get In Touch</h3>
-			        <!-- <div class="form-row">
+		        <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="POST" action="{% url 'send_mail' %}">
+					{% csrf_token %}
+			        <h3 class="text-center mb-3"></h3>
+			         <div class="form-row">
 		                <div class="form-group col-md-6">
 		                    <label class="sr-only" for="cname">Name</label>
-		                    <input type="text" class="form-control" id="cname" name="name" placeholder="Name" minlength="2" required="" aria-required="true">
+		                    <input type="text" class="form-control" id="cname" name="name" placeholder="Naam" minlength="2" required="" aria-required="true">
 		                </div>
 		                <div class="form-group col-md-6">
 		                    <label class="sr-only" for="cemail">Email</label>
 		                    <input type="email" class="form-control" id="cemail" name="email" placeholder="Email" required="" aria-required="true">
 		                </div>
 		                <div class="form-group col-12">
-		                    <label class="sr-only" for="cmessage">Your message</label>
-		                    <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="10" required="" aria-required="true"></textarea>
+		                    <label class="sr-only" for="cmessage">Je berichtje</label>
+		                    <textarea class="form-control" id="cmessage" name="message" placeholder="Typ hier je bericht" rows="10" required="" aria-required="true"></textarea>
 		                </div>
 		                 <div class="form-group col-12">
-		                    <button type="submit" class="btn btn-block btn-primary py-2">Send It</button>
+		                    <button type="submit" class="btn btn-block btn-primary py-2">Stuur berichtje</button>
 		                </div>
-		            </div>//form-row-->
-                <button type="submit" class="btn btn-block btn-primary py-2">Send email</button>
+		            </div>
 		        </form>
 
             </div><!--//row-->
