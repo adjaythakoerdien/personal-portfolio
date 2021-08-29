@@ -7,9 +7,16 @@
         <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container">
 		        <h2 class="page-heading mb-0">Contact</h2>
-				<p>
-					{{ verzonden }}
-				</p>
+				{% if verzonden == 'verzonden' %}
+				<div class="alert alert-success" role="alert">
+					Je berichtje is verzonden!
+				</div>
+				{% endif %}
+				{% if verzonden == 'fout' %}
+				<div class="alert alert-danger" role="alert">
+					Er ging iets fout, probeer het opnieuw..
+				</div>
+				{% endif %}
 	        </div><!--//container-->
         </div><!--//header-intro-->
 

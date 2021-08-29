@@ -42,11 +42,11 @@ def send_gmail(request):
             fail_silently=False,
         )
 
-        verzonden = "Je berichtje is verzonden!"
+        verzonden = "verzonden"
         return render(request, 'portfolio/contact.html', {'pagina': 'contact', 'verzonden':verzonden})
     else:
         return render(request, 'portfolio/contact.html', {'pagina': 'contact',
-                                                          'verzonden':'Er ging iets mis, probeer het opnieuw..'})
+                                                          'verzonden':'fout'})
 
 def contact(request):
     return render(request, 'portfolio/contact.html', {'pagina': 'contact'})
