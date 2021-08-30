@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Blogpost
-from portfolio.models import Intro
+from .models import Blogpost, Intro
 
 def all_blogs(request):
     intro = Intro.objects.all()

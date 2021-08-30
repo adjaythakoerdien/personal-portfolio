@@ -31,7 +31,7 @@
 							<img class="card-img-top rounded-0" src="{{ project.image.url }}" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
 							</div>
-							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{{ project.url }}">
+							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{% url 'projects:project' project.id %}">
 								<h5 class="card-title font-weight-bold">{{ project.title }}</h5>
 							    <p class="card-text">{{ project.description|safe }}</p>
 							</a>

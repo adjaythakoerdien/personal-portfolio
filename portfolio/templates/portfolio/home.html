@@ -110,7 +110,7 @@
 							<img class="card-img-top rounded-0" src="{{ project.image.url }}" alt="">
 							<div class="card-img-overlay overlay-logo text-center">
 							</div>
-							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{{ project.url }}">
+							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{% url 'projects:project' project.id %}">
 								<h5 class="card-title font-weight-bold">{{ project.title }}</h5>
 							    <p class="card-text">{{ project.description|safe }}</p>
 							</a>
@@ -140,11 +140,11 @@
         </div><!--///container-->
 
         	<div class="text-center">
-            <a class="btn btn-primary" href="{% url 'projects:all_projects' %}">Alle projecten</a>
+            <a class="btn btn-primary" href="{% url 'projects:all_projects' %}">Bekijk alle projecten</a>
        		 </div>
 
     </section>
-
+<!--
     <section class="section-latest-blog py-5">
         <div class="container">
 	        <h3 class="section-title font-weight-bold text-center mb-5">Recente blogposts</h3>
@@ -156,7 +156,7 @@
 		        <div class="col-12 col-lg-6">
 			        <div class="card rounded-0 border-0 shadow-sm mb-5">
 						<div class="card-img-container position-relative">
-					        <img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/blog/blog-post-thumb-2.jpg" %}" alt="">
+					        <img class="card-img-top rounded-0" src="{{ blog.image.url }}" alt="">
 					        <div class="card-img-overlay overlay-mask overlay-logo text-center p-0">
 						        <div class="overlay-mask-content text-center w-100 position-absolute">
 								    <a class="btn btn-primary" href="{% url 'blog:detail' blog.id %}">Lees meer</a>
@@ -174,7 +174,7 @@
 								<div class="excerpt"> {{ blog.description|striptags|truncatechars:100 }}</div>
 							</div>
 						</div>
-				    </div><!--//card-->
+				    </div>
 		        </div>
 
             {% endfor %}
@@ -184,18 +184,18 @@
 
 
 
-	        </div><!--//blog-cards-->
+	        </div>
 
 
         </div>
 
         <div class="text-center">
-            <a class="btn btn-primary" href="{% url 'blog:all_blogs' %}">Alle posts</a>
+            <a class="btn btn-primary" href="{% url 'blog:all_blogs' %}">Bekijk alle blogposts</a>
         </div>
 
 
     </section>
-
+-->
 
 	    <section class="section-proof section bg-white py-5">
         <div class="container">

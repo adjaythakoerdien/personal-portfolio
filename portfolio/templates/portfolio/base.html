@@ -66,9 +66,10 @@
 							    <a class="nav-link dropdown-toggle" href="#" id="navigationLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projecten
 								</a>
 								<div class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg" aria-labelledby="navigationLink">
-									<a class="dropdown-item" href="{% url 'blog:all_blogs' %}" target="_blank">Project: Blog</a>
-									<a class="dropdown-item" href="{% url 'todo:home' %}" target="_blank">Webapp: Todo</a>
-									<a class="dropdown-item" href="#" target="_blank">Happiness detector (binnenkort beschikbaar)</a>
+									<a class="dropdown-item" href="{% url 'projects:all_projects' %}">Alle projecten</a>
+<!--									<a class="dropdown-item" href="{% url 'projects:project' 1 %}"> - Project: Blog</a>-->
+									<a class="dropdown-item" href="{% url 'projects:project' 2 %}"> - Webapp: Todo</a>
+									<a class="dropdown-item" href="#"> - Happiness detector (binnenkort beschikbaar)</a>
 								</div>
 							</li>
 
