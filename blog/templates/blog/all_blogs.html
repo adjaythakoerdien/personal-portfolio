@@ -64,10 +64,10 @@
 		        <div class="col-12 col-md-6 col-lg-4 mb-5">
 			        <div class="card rounded-0 border-0 shadow-sm eq-height">
 						<div class="card-img-container position-relative">
-					        <img class="card-img-top rounded-0" src="{% static "portfolio/assets/images/blog/blog-post-thumb-2.jpg" %}" alt="">
+					        <img class="card-img-top rounded-0" src="{{ blog.image.url }}" alt="">
 					        <div class="card-img-overlay overlay-mask text-center p-0">
 						        <div class="overlay-mask-content text-center w-100 position-absolute">
-								    <a class="btn btn-primary" href="{% url 'blog:detail' blog.id %}">Read more</a>
+								    <a class="btn btn-primary" href="{% url 'blog:detail' blog.id %}">Bekijk</a>
 						        </div>
 						        <a class="overlay-mask-link position-absolute w-100 h-100" href="{% url 'blog:detail' blog.id %}"></a>
 							</div>
