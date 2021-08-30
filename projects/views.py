@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Project
+from .models import Project, Intro
 
 # Create your views here.
 def all_projects(request):
 	projects = Project.objects.all()
+	intro = Intro.objects.all()
 
-	return render(request, 'projects/projects.html', {'projects':projects})
+	return render(request, 'projects/projects.html', {'projects':projects, 'intro':intro})
 
 img_dict = {'html': 'portfolio/assets/images/webdev-icons/html5.svg',
 			'django': 'portfolio/assets/images/webdev-icons/django.svg',
@@ -16,6 +17,7 @@ img_dict = {'html': 'portfolio/assets/images/webdev-icons/html5.svg',
 
 def project(request, project_id):
 	project = get_object_or_404(Project, pk=project_id)
+
 
 	lijst = str(project.technologies).split(', ')
 	img_lijst = []

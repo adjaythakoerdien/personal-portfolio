@@ -6,8 +6,10 @@
         
         <div class="header-intro theme-bg-primary text-white py-5">
 	        <div class="container">
-		        <h2 class="page-heading mb-3">Alle projecten</h2>
-		        <div class="page-heading-tagline">Hieronder vindt je een overzicht van mijn meest recente projecten.</div>
+				{% for intr in intro %}
+		        <h2 class="page-heading mb-3">{{ intr.name }}</h2>
+		        <div class="page-heading-tagline">{{ intr.text }}</div>
+				{% endfor %}
 		        
 	        </div><!--//container-->
         </div><!--//header-intro-->
