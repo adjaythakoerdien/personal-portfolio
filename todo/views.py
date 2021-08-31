@@ -18,7 +18,7 @@ def loginuser(request):
     else:
         user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
         if user is None:
-            return render(request,'todo/loginuser.html', {'form':AuthenticationForm(),'error':'Username and password did not match'})
+            return render(request,'todo/loginuser.html', {'form':AuthenticationForm(),'error':'Gebruikersnaam en/of wachtwoord ongebekend'})
         else:
             login(request, user)
             return redirect('todo:currenttodos')
@@ -35,10 +35,10 @@ def signupuser(request):
                 login(request, user)
                 return redirect('todo:currenttodos')
             except IntegrityError:
-                return render(request,'todo/signupuser.html', {'form':UserCreationForm(),'error':'That username has already been taken. Please choose a new username'})
+                return render(request,'todo/signupuser.html', {'form':UserCreationForm(),'error':'Gebruikersnaam bestaat al. Kies een andere gebruikersnaam'})
 
         else:
-            return render(request,'todo/signupuser.html', {'form':UserCreationForm(),'error':'Passwords did not match'})
+            return render(request,'todo/signupuser.html', {'form':UserCreationForm(),'error':'Wachtwoorden komen nieut overeen'})
 
 @login_required
 def logoutuser(request):
@@ -68,7 +68,7 @@ def viewtodo(request, todo_pk):
             form.save()
             return redirect('todo:currenttodos')
         except ValueError:
-            return render(request, 'todo/viewtodo.html', {'todo':todo, 'form':form, 'error':'Bad info'})
+            return render(request, 'todo/viewtodo.html', {'todo':todo, 'form':form, 'error':'Fout'})
 
 @login_required
 def createtodo(request):
@@ -82,7 +82,7 @@ def createtodo(request):
             newtodo.save()
             return redirect('todo:currenttodos')
         except ValueError:
-            return render(request,'todo/createtodo.html', {'form':Todoform(),'error':'Bad data put in. Try again!'})
+            return render(request,'todo/createtodo.html', {'form':Todoform(),'error':'Foutieve invoer. Probeer opnieuw!'})
 
 @login_required
 def completetodo(request, todo_pk):

@@ -19,23 +19,23 @@
 <div class="container">
     <a class="navbar-brand" href="{% url 'todo:home' %}">
          <img src="{% static 'todo/logo.png' %}" width="30" height="30" class="d-inline-block align-top">
-        <span>Todo!</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
     {% if user.is_authenticated %}
+
         <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item {{ current }}">
-                    <a class="nav-link href="{% url 'todo:currenttodos' %}">Huidige taken</a>
+                    <a class="nav-link" href="{% url 'todo:currenttodos' %}">Todo's</a>
                 </li>
                 <li class="nav-item {{ completed }}">
-                    <a class="nav-link" href="{% url 'todo:completedtodos' %}">Afgeronde taken</a>
+                    <a class="nav-link" href="{% url 'todo:completedtodos' %}">Afgerond</a>
                 </li>
                 <li class="nav-item {{ create }}">
-                    <a class="nav-link" href="{% url 'todo:createtodo' %}">Maak taak</a>
+                    <a class="nav-link" href="{% url 'todo:createtodo' %}">Nieuw!</a>
                 </li>
 
         </ul>
@@ -46,15 +46,15 @@
                     <a href="#" onclick="$('#signOutBtn').click()" class="nav-link">Uitloggen</a>
                     <form style='display: none;' method="POST" action="{% url 'todo:logoutuser' %}">
                         {% csrf_token %}
-                        <button id="signOutBtn" type="submit">Logout</button>
+                        <button id="signOutBtn" type="submit">Uitloggen</button>
                     </form>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'todo:signupuser' %}">Sign Up</a>
+                    <a class="nav-link" href="{% url 'todo:signupuser' %}">Registreren</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'todo:loginuser' %}">Login</a>
+                    <a class="nav-link" href="{% url 'todo:loginuser' %}">Inloggen</a>
                 </li>
             {% endif %}
         </ul>
