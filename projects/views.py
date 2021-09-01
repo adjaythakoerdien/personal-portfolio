@@ -12,7 +12,9 @@ img_dict = {'html': 'portfolio/assets/images/webdev-icons/html5.svg',
 			'django': 'portfolio/assets/images/webdev-icons/django.svg',
 			'python': 'portfolio/assets/images/webdev-icons/python.svg',
 			'bootstrap': 'portfolio/assets/images/webdev-icons/bootstrap4.svg',
-			'tensorflow': 'portfolio/assets/images/webdev-icons/tensorflow-2.svg'
+			'tensorflow': 'portfolio/assets/images/webdev-icons/tensorflow-2.svg',
+			'css': 'portfolio/assets/images/webdev-icons/css3.svg',
+			'opencv': 'portfolio/assets/images/webdev-icons/opencv.svg'
 			}
 
 def project(request, project_id):

@@ -29,8 +29,7 @@
 					<div class="card rounded-0 border-0 shadow-sm mb-5 mb-lg-0">
 						<div class="card-img-container position-relative">
 							<img class="card-img-top rounded-0" src="{{ project.image.url }}" alt="">
-							<div class="card-img-overlay overlay-logo text-center">
-							</div>
+
 							<a class="card-img-overlay overlay-content text-left p-lg-4" href="{% url 'projects:project' project.id %}">
 								<h5 class="card-title font-weight-bold">{{ project.title }}</h5>
 							    <p class="card-text">{{ project.description|safe }}</p>
@@ -47,10 +46,12 @@
 						        <li class="list-inline-item"><span class="badge badge-secondary badge-pill">{{ ding }}</span></li>
                     {% endfor %}
 							</ul>
+
 					    </div>
 				    </div><!--//card-->
 
-
+					<br>
+					<br>
 		        </div>
 		        {% endfor %}
 

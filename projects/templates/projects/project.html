@@ -19,10 +19,12 @@
 
 		        <h3 class="section-title">In het kort</h3>
 		        
-		        <p>{{ project.intro }}</p>
+		        <p>{{ project.intro|safe }}</p>
 
-		        <div class="mb-5"><a class="btn btn-primary" href="{{ project.url }}" target="_blank"><i class="fas fa-external-link-alt mr-2"></i> Bekijk live project</a></div>
-		        
+				{% if project.url != '' %}
+		        <div class="mb-5"><a class="btn btn-primary" href="{{ project.url }}" target="_blank">
+					<i class="fas fa-external-link-alt mr-2"></i> Bekijk live project</a></div>
+		        {% endif %}
 		
 		        <div id="project-carousel" class="theme-carousel slide mb-5 carousel" data-ride="carousel">
 			        <ol class="carousel-indicators">
@@ -70,10 +72,10 @@
 	        
 	        
 	        <div class="section-row">
-		        <h3 class="section-title">Inhoud</h3>
+		        <h3 class="section-title">Verder</h3>
 		        
 				
-				<p>{{ project.text }}</p>
+				<p>{{ project.text|safe }}</p>
 
 	        </div><!--//section-row-->
 
